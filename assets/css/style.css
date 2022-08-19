@@ -1,0 +1,233 @@
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@600&display=swap');
+
+/* Variable CSS */
+:root{
+    --header-height: 3.5rem;
+
+/* ===== Colors ==== */
+
+--bg-color: hsl(220, 18%, 78%);
+--bg-color-light: hsl(220, 18%, 86%);
+--title-color: hsl(220, 18%, 10%);
+--text-color:hsl(220, 4%, 32%);
+--text-color-light:hsl(220, 4%, 55%);
+--body-color:hsl(220, 18%, 99%);
+--container-color:hsl(220, 18%, 97%);
+
+/* ==== Font and Typography ==== */
+    /* .5rem = 8px | 1 rem = 16px */
+--body-font: 'Lora', serif;
+
+--biggest-font-size: 2.25rem;
+--h1-font-size: 1.5rem;
+--h2-font-size: 1.25rem;
+--h3-font-size: 1rem;
+--normal-font-size: .938rem;
+--small-font-size: .813rem;
+--normal-font-size: .75;
+
+/* ==== Font Weight ==== */
+--font-regular:; 
+--font-medium:;
+--font-semi-bold:;
+
+/* ==== z-index ==== */
+--z-tooltip:10;
+--z-fixed:100;
+
+}
+
+/* BASE */
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    background-color: var(--body-color);
+    color: var(--text-color);
+}
+
+h1,h2,h3{
+    color: var(--title-color);
+    font-weight: var(--font-medium);
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+/* ========== Reusable CSS Classes ============*/
+.container{
+    max-width: 1024px;
+    margin-right: 1.5rem;
+    margin-left: 1.5rem;
+}
+
+.grid{
+    display: grid;
+    gap: 1.5rem;
+}
+
+.section{
+    padding: 4.5rem 0  2rem;
+}
+
+.section-title{
+    font-size: var(--h1-font-size);
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.main{
+    overflow: hidden;
+}
+
+
+/* ========== Header & Nav ============*/
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: var(--z-fixed);
+    transition: 4s;
+}
+
+.nav{
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo{
+    color: var(--title-color);
+    font-weight: var(--font-medium);
+}
+
+@media screen and (max-width: 1023px){
+    .nav-menu{
+        position: fixed;
+        bottom:1.5rem;
+        background-color: var(--body-color);
+        box-shadow:
+        -3.6px -3.6px 2.2px rgba(0, 0, 0, 0.024),
+        -5.9px -5.9px 5.3px rgba(0, 0, 0, 0.045),
+        4.5px 4.5px 10px rgba(0, 0, 0, 0.063),
+        40.4px 40.4px 17.9px rgba(0, 0, 0, 0.083),
+        72.3px 72.3px 33.4px rgba(0, 0, 0, 0.105),
+        100px 100px 80px rgba(0, 0, 0, 0.13);
+        width: 90%;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        padding: 1.25rem 2.8rem;
+        border-radius: .5rem;
+    }
+
+    .nav-list{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav-link{
+        color: var(--text-color-light);
+        font-weight: var(--font-semi-bold);
+        display: grid;
+        justify-items: center;
+        gap: 3px
+    }
+
+    .nav-link i{
+        font-size: var(--h2-font-size);
+    }
+    
+    .nav-link span{
+        color: var(--normal-font-size);
+    }
+}
+
+
+/* ==== Home ====*/
+.home{
+    background-color: var(--bg-color);
+    overflow: hidden;
+}
+
+.home-container{
+    padding: 4rem 0 1rem;
+    row-gap: 8.5rem;
+}
+
+.home-title{
+    font-size: var(--biggest-font-size);
+    font-weight: var(--font-semi-bold);
+}
+
+.home-description{
+    color: var(--title-color);
+    font-size: 20px;
+    font-weight: var(--font-medium);
+    margin: 20px 0 20px;
+}
+
+
+.home-images{
+    position: relative;
+    width: 310px;
+    justify-self: center;
+}
+
+.home-images img:nth-child(1){
+    width: 224px;
+    position: absolute;
+    right: -1.5rem;
+    top: -9.5rem;
+}
+
+.home-images img:nth-child(2){
+    width: 180px;
+    margin-left: .5rem;
+    position: relative;
+}
+
+/* ==== Button ====*/
+.button-link{
+    color: var(--title-color);
+    font-weight: var(--font-medium);
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.button-link i:hover{
+    transition: 0.5s ease-in-out;
+    transform: translateX(10px);
+}
+
+
+
+
+
+
+
