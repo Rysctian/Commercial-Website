@@ -308,12 +308,62 @@ img{
 }
 
 .collection-data-men{
-    margin: 50px 30px 0 -40px;
-    justify-content: flex-start;
-                                                                                                                               
+    margin-top: 2.5rem;                                                                                                                        
 }
 
 .collection-data-women{
-    margin: 90px -40px 0 30px;
-    align-items: ;
+    margin-bottom: 2.5rem;
+    align-self: flex-end;
+}
+
+.collection-title{
+    font-size: 1.8rem;
+}
+
+/* =====PRODUCT===== */
+.product-container{
+    padding-bottom: 5rem;
+}
+
+.product-cards{
+    width: 270px;
+}
+
+.products-img{
+    margin-bottom: 1rem;
+}
+
+.product-title{
+    font-size: var(--h3-font-size);
+    margin-bottom: .75rem;
+}
+
+.product-price{
+    font-size: var(--font-medium);
+    color: var(--title-color);
+
+}
+
+/* ==== Swiper Class ==== */
+.swiper-button-prev::after,
+.swiper-button-next::after{
+    content: '';
+}
+
+.swiper-button-prev,
+.swiper-button-next{
+    top: initial;
+    bottom: 0;
+    width: initial;
+    height: initial;
+    font-size: 1.5rem;
+    color: var(--title-color);
+}
+
+.swiper-button-prev{
+    margin-left: 150px;
+}
+
+.swiper-button-next{
+    margin-right: 150px;
 }

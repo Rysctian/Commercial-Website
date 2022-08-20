@@ -21,6 +21,19 @@ const scrollHeader = () =>{
 window.addEventListener('scroll', scrollHeader); //sa baba palagin mag initialize ng function name
 
 
-
+// SWIPER PRODUCTS
+    // change swiper with swiperProducts
+let swiperProducts = new Swiper(".product-container", { // change ".mySwiper" to container name "product-container"
+    spaceBetween: 32,
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerview: 'auto',
+    loop: true,
+    
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
 
 
