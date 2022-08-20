@@ -28,9 +28,9 @@
 --normal-font-size: .75;
 
 /* ==== Font Weight ==== */
---font-regular:; 
---font-medium:;
---font-semi-bold:;
+--font-regular: 400; 
+--font-medium: 500;
+--font-semi-bold: 600;
 
 /* ==== z-index ==== */
 --z-tooltip:10;
@@ -167,6 +167,13 @@ img{
     }
 }
 
+/* HEADER CHANGE BACKGROUND */
+.scroll-header{
+    background-color: var(--body-color);
+    box-shadow: 0 1px 4px hsla(220, 4%, 15%, .1);
+    color: transparent;
+}
+
 
 /* ==== Home ====*/
 .home{
@@ -191,9 +198,13 @@ img{
     margin: 20px 0 20px;
 }
 
+.home-title,
+.home-description{
+    line-height: 150%;
+}
 
-.home-images{
-    position: relative;
+.home-images{ 
+    position: relative;  /* susunod siya sa container ng home kasi yun yung parent */
     width: 310px;
     justify-self: center;
 }
@@ -226,8 +237,83 @@ img{
 }
 
 
+/* ===== New ===== */
+.new-container{
+    row-gap: 2.4rem;
+}
 
+.new-card{
+    justify-self: center;
+}
 
+.new-img{
+    width: 400px;
+    margin-bottom: 3px;
+}
 
+.new-link{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--title-color);
+    padding-right: .75rem;
+}
 
+.new-link i{
+    font-size: 1.25rem;
+    transition: .3s;
+   
+}
 
+.new-link i:hover{
+    transition: 0.5s ease-in-out;
+    transform: translateX(10px);
+}
+
+.new-title{
+    font-size: var(--h2-font-size);
+    margin-bottom: .5rem;
+}
+
+.new-title span{
+    font-size: var(--small-font-size);
+    color: var(--text-color);
+}
+
+/* ===== Collection Section ===== */
+
+.collection{
+    background-color: var(--bg-color);
+    overflow: hidden;
+}
+
+.collection-explore{
+   display: grid;
+   column-gap: 2rem;
+   position: absolute;
+}
+
+.collection-explore:nth-child(2){
+    grid-template-columns: 230px max-content;
+    bottom: 1rem;
+    margin-right: 5rem;
+    position: relative;
+}
+
+.collection-explore:nth-child(1){
+    grid-template-columns: max-content 230px;
+    top: 0;
+    margin-left: 5rem;
+    position: relative;
+}
+
+.collection-data-men{
+    margin: 50px 30px 0 -40px;
+    justify-content: flex-start;
+                                                                                                                               
+}
+
+.collection-data-women{
+    margin: 90px -40px 0 30px;
+    align-items: ;
+}
